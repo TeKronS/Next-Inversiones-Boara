@@ -1,95 +1,48 @@
-import Image from "next/image";
 import styles from "./page.module.css";
+import { Card } from "@/components/Cards/GridCard";
+import img1 from "@/img/Card/1.jpg";
+import img2 from "@/img/Card/2.jpg";
+import img3 from "@/img/Card/3.jpg";
+import img4 from "@/img/Card/4.jpg";
+import img5 from "@/img/Card/5.jpg";
+import img6 from "@/img/Card/6.jpg";
+import img7 from "@/img/Card/7.jpg";
+import img8 from "@/img/Card/8.jpg";
+import img9 from "@/img/Card/9.jpg";
+import img10 from "@/img/Card/10.jpg";
+import img11 from "@/img/Card/11.jpg";
+import img12 from "@/img/Card/12.jpg";
+import img13 from "@/img/Card/13.jpg";
+import img14 from "@/img/Card/14.jpg";
+import img15 from "@/img/Card/15.jpg";
+import img16 from "@/img/Card/16.jpg";
+import img17 from "@/img/Card/17.jpg";
+import img18 from "@/img/Card/18.jpg";
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol>
-          <li>
-            Get started by editing <code>src/app/page.tsx</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className={styles.footer}>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+    <section className={styles.main}>
+      <h1 className={styles.title}></h1>
+      <section className={styles.cardContent}>
+        <Card title="Titulo de arreglo 1" img={img1} />
+        <Card title="Titulo de arreglo 1" img={img2} />
+        <Card title="Titulo de arreglo 1" img={img3} />
+        <Card title="Titulo de arreglo 1" img={img4} />
+        <Card title="Titulo de arreglo 1" img={img5} />
+        <Card title="Titulo de arreglo 1" img={img6} />
+        <Card title="Titulo de arreglo 1" img={img7} />
+        <Card title="Titulo de arreglo 1" img={img8} />
+        <Card title="Titulo de arreglo 1" img={img9} />
+        <Card title="Titulo de arreglo 1" img={img10} />
+        <Card title="Titulo de arreglo 1" img={img11} />
+        <Card title="Titulo de arreglo 1" img={img12} />
+        <Card title="Titulo de arreglo 1" img={img13} />
+        <Card title="Titulo de arreglo 1" img={img14} />
+        <Card title="Titulo de arreglo 1" img={img15} />
+        <Card title="Titulo de arreglo 1" img={img16} />
+        <Card title="Titulo de arreglo 1" img={img17} />
+        <Card title="Titulo de arreglo 1" img={img18} />
+      </section>
+    </section>
   );
 }
