@@ -1,6 +1,5 @@
-// import { Footer, Copyright, Contact, Ubication } from "./styles";
 import whatsapp from "./../img/WhatsappIcon.jpg";
-import facebook from "./../components/FacebookChat/img/IconMsg.png";
+import facebook from "@/img/IconMsg.png";
 import styles from "./styles.module.css";
 import Image from "next/image";
 
