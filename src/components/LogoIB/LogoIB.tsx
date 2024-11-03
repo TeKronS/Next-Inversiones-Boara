@@ -5,7 +5,7 @@ import styles from "./logoIB.module.css";
 export const LogoIB = () => {
   const refBoxLogo = useRef<HTMLDivElement>(null);
   const LogoResizeBox = useRef<HTMLDivElement>(null);
-  const containerBg = useRef<HTMLDivElement>(null);
+  const refContainer = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     setTimeout(() => {
@@ -17,7 +17,8 @@ export const LogoIB = () => {
     setTimeout(() => {
       LogoResizeBox.current?.classList.remove(styles.logoContainerFullScreen);
       refBoxLogo.current?.classList.remove(styles.BoxLogoCenter);
-      containerBg.current?.classList.remove(styles.containerBg2);
+      refContainer.current?.classList.remove(styles.containerBg);
+      refContainer.current?.classList.add(styles.disp);
     }, 700);
   }
   function elementPositionchanged() {
@@ -31,42 +32,40 @@ export const LogoIB = () => {
   }
 
   return (
-    <div className={styles.logoContainer}>
+    <div
+      ref={refContainer}
+      className={`${styles.containerBg} ${styles.logoContainer}`}
+    >
       <div
-        ref={containerBg}
-        className={`${styles.containerBg} ${styles.containerBg2}`}
+        className={`${styles.logoContainerFullScreen} ${styles.resizeBox}`}
+        onTransitionEnd={elementPositionchanged}
+        ref={LogoResizeBox}
       >
         <div
-          className={`${styles.logoContainerFullScreen} ${styles.resizeBox}`}
-          onTransitionEnd={elementPositionchanged}
-          ref={LogoResizeBox}
+          ref={refBoxLogo}
+          className={`${styles.boxLogo} ${styles.BoxLogoCenter}`}
         >
           <div
-            ref={refBoxLogo}
-            className={`${styles.boxLogo} ${styles.BoxLogoCenter}`}
+            onTransitionEnd={endAnimation}
+            className={`${styles.IBF} ${styles.IBFl} ${styles.animationIBF}`}
           >
-            <div
-              onTransitionEnd={endAnimation}
-              className={`${styles.IBF} ${styles.IBFl} ${styles.animationIBF}`}
-            >
-              <div></div>
-            </div>
+            <div></div>
+          </div>
 
-            <div
-              onTransitionEnd={transitionEndRight}
-              className={`${styles.IBFr} ${styles.IBF} ${styles.animationIBF}`}
-            >
-              <div></div>
-            </div>
+          <div
+            onTransitionEnd={transitionEndRight}
+            className={`${styles.IBFr} ${styles.IBF} ${styles.animationIBF}`}
+          >
+            <div></div>
+          </div>
 
-            <div
-              onTransitionEnd={transitionEndCenter}
-              className={`${styles.IB} ${styles.animationIB}`}
-            >
-              <div className={styles.IBTextContainer}>
-                <div className={styles.IBText} translate={"no"}>
-                  IB
-                </div>
+          <div
+            onTransitionEnd={transitionEndCenter}
+            className={`${styles.IB} ${styles.animationIB}`}
+          >
+            <div className={styles.IBTextContainer}>
+              <div className={styles.IBText} translate={"no"}>
+                IB
               </div>
             </div>
           </div>

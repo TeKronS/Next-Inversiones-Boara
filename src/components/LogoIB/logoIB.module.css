@@ -1,7 +1,10 @@
 .logoContainer {
   position: fixed;
-  width: 1px;
-  height: 1px;
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  transition: 500ms ease-in-out 0s;
+  pointer-events: none;
   z-index: 100;
 }
 
@@ -9,10 +12,10 @@
   position: relative;
   width: 1px;
   height: 1px;
-  top: 5px;
-  left: 5px;
+  top: 18px;
+  left: 20px;
   transform-origin: top left;
-  transform: scale(0.9, 0.8) translatex(0);
+  transform: scale(0.8, 0.7) translatex(0);
 }
 
 .BoxLogoCenter {
@@ -21,18 +24,15 @@
 }
 
 .containerBg {
-  display: flex;
   position: fixed;
-  width: 100vw;
-  height: 100vh;
-  transition: 700ms ease-in-out 0s;
-  pointer-events: none;
+  background: var(--color-main1);
+  pointer-events: all;
 }
 
 .resizeBox {
   display: flex;
   transform-origin: left top;
-  transition: 700ms ease-in-out 0s;
+  transition: 500ms ease-in-out 0s;
   top: 1;
   left: 1;
   width: 3px;
@@ -51,9 +51,7 @@
   transform: scale(1) !important;
   /* transition: 700ms ease-in-out 0s; */
 }
-.containerBg2 {
-  background: var(--color-main1);
-}
+
 .animationIBF {
   transform: scale(1.2, 1) translatex(-1200px) !important;
 }
@@ -64,7 +62,7 @@
 
 .IBFl {
   left: 7px;
-  transition: 700ms ease-in-out 0s;
+  transition: 500ms ease-in-out 0s;
 }
 .IBFl div {
   background: linear-gradient(170deg, black 0%, var(--color-font-1) 100%);
@@ -72,7 +70,7 @@
 }
 .IBFr {
   left: 238.4px;
-  transition: 700ms ease-in-out 0s;
+  transition: 500ms ease-in-out 0s;
 }
 .IBFr div {
   background: linear-gradient(90deg, black 0%, var(--color-font-1) 100%);
@@ -89,7 +87,7 @@
   align-items: center;
   overflow: hidden;
   transform: scale(1.2, 1) translatex(0);
-  transition: 700ms ease-in-out 0s;
+  transition: 500ms ease-in-out 0s;
 }
 
 .IBF div {
@@ -100,7 +98,7 @@
 
 .IB {
   position: relative;
-  transition: 700ms ease-in-out 0s;
+  transition: 500ms ease-in-out 0s;
   transform: scale(1, 0.8) translatex(0);
   width: 150px;
   height: 315px;
