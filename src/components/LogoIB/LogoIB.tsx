@@ -10,7 +10,7 @@ export const LogoIB = () => {
   useEffect(() => {
     setTimeout(() => {
       refBoxLogo.current?.children[1].classList.remove(styles.animationIBF);
-    }, 1000);
+    }, 600);
   }, []);
 
   function endAnimation() {
