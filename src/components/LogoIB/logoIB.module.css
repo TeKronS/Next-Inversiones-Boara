@@ -46,18 +46,15 @@
 .logoContainerFullScreen {
   width: 100vw;
   height: 100vh;
-  bottom: 0;
-  right: 0;
   transform: scale(1) !important;
-  /* transition: 700ms ease-in-out 0s; */
 }
 
 .animationIBF {
-  transform: scale(1.2, 1) translatex(-1200px) !important;
+  transform: scale(1.2, 1) translatex(-2200px) !important;
 }
 
 .animationIB {
-  transform: scale(1, 0.8) translatex(-1240px) !important;
+  transform: scale(1, 0.8) translatex(-2240px) !important;
 }
 
 .IBFl {
