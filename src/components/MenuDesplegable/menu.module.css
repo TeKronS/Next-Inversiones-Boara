@@ -1,0 +1,75 @@
+.body {
+  position: fixed;
+  display: grid;
+  box-sizing: content-box;
+  top: 110px;
+  z-index: 50;
+  /* overflow: hidden; */
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+  transition: 400ms ease-in-out 0s all;
+  width: 100vw;
+  max-width: 500px;
+  background-color: var(--color-main2);
+  left: calc(50vw - 258px);
+  height: 10px;
+}
+
+.body:hover {
+  height: 250px;
+}
+
+.body:hover .boton {
+  bottom: 0;
+  background-color: transparent;
+}
+
+.boton {
+  position: absolute;
+  background-color: var(--color-main2);
+  width: 100px;
+  height: 45px;
+  display: flex;
+  justify-self: center;
+  bottom: -45px;
+  transition: 400ms ease-in-out 0s all;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+}
+
+.innerBody {
+  width: 100vw;
+  max-width: 500px;
+  height: 10px;
+  left: -10px;
+  overflow: hidden;
+  transition: 400ms ease-in-out 0s all;
+}
+
+.body:hover .innerBody {
+  height: 250px;
+}
+
+.optionsContainer {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(auto-fit, 150px);
+  justify-content: space-around;
+  gap: 10px;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+.optionsContainer li {
+  background-color: var(--color-titlePage);
+  padding: 10px;
+  border-radius: 50px;
+  width: 150px;
+  text-align: center;
+  cursor: pointer;
+  transition: 175ms ease-in-out 0s all;
+}
+
+.optionsContainer li:hover {
+  background-color: burlywood;
+}

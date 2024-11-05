@@ -1,5 +1,5 @@
 import Image from "next/image";
-import styles from "./gridCard.module.css";
+import styles from "./Card.module.css";
 import img1 from "@/img/Card/1.jpg";
 import whatsap from "@/img/WhatsappIcon.jpg";
 
