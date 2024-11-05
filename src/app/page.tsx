@@ -1,5 +1,6 @@
 import styles from "./page.module.css";
-import { Card } from "@/components/Cards/GridCard";
+import { Card } from "@/components/Cards/Card";
+import { MenuDesplegable } from "@/components/MenuDesplegable/MenuDesplegable";
 import img1 from "@/img/Card/1.jpg";
 import img2 from "@/img/Card/2.jpg";
 import img3 from "@/img/Card/3.jpg";
@@ -22,7 +23,7 @@ import img18 from "@/img/Card/18.jpg";
 export default function Home() {
   return (
     <section className={styles.main}>
-      <h1 className={styles.title}></h1>
+      <MenuDesplegable />
       <section className={styles.cardContent}>
         <Card title="Titulo de arreglo 1" img={img1} />
         <Card title="Titulo de arreglo 1" img={img2} />
