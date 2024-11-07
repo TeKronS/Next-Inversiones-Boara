@@ -11,22 +11,24 @@ export const MenuDesplegable = () => {
 
   function clickButton() {
     if (isOpen) {
-      // refNavBody.current?.classList.add(styles.botonOpen);
       refButton.current?.children[0]?.classList.add(styles.svgOpen);
       refButton.current?.classList.add(styles.botonOpen);
       refNavBody.current?.classList.add(styles.bodyOpen);
       isOpen = false;
     } else {
-      // refNavBody.current?.classList.remove(styles.botonOpen);
-      refButton.current?.children[0]?.classList.remove(styles.svgOpen);
-      refButton.current?.classList.remove(styles.botonOpen);
-      refNavBody.current?.classList.remove(styles.bodyOpen);
-      isOpen = true;
+      mouseOver();
     }
   }
 
+  function mouseOver() {
+    refButton.current?.children[0]?.classList.remove(styles.svgOpen);
+    refButton.current?.classList.remove(styles.botonOpen);
+    refNavBody.current?.classList.remove(styles.bodyOpen);
+    isOpen = true;
+  }
+
   return (
-    <nav ref={refNavBody} className={styles.body}>
+    <nav onMouseLeave={mouseOver} ref={refNavBody} className={styles.body}>
       <div ref={refButton} onClick={clickButton} className={styles.boton}>
         <ArrowDown />
       </div>
