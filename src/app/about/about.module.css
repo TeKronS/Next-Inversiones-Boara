@@ -22,6 +22,11 @@
   margin: 20px;
 }
 
+.body h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
 .paragraph {
   text-align: justify;
   text-indent: 10px;
@@ -39,6 +44,7 @@
 .contactUS a {
   margin-left: 5px;
   white-space: nowrap;
+  transition: 300ms ease-in-out 0s;
 }
 
 .contactUS a {
@@ -49,6 +55,11 @@
   margin: 5px 0;
   padding: 3px 15px;
   cursor: pointer;
+  @media screen and (max-width: 440px) {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
 }
 
 .contactUS a:hover {

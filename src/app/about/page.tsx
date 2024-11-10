@@ -3,12 +3,23 @@ import styles from "./about.module.css";
 export default function AboutUs() {
   return (
     <section className={styles.body}>
-      <h2 className={styles.title}>Sobre Nosotros</h2>
+      <h2 className={styles.title}>SOBRE NOSOTROS</h2>
       <section>
+        <h3>MISIÓN</h3>
         <p className={styles.paragraph}>
-          Ofrecemos arreglos personalizados para matrimonios, aniversarios,
-          cumpleaños y más. Sorprende a tu ser querido con un detalle único.
-          ¡Nosotros hacemos que sea posible!
+          Ofrecemos experiencias únicas y memorables a través de regalos
+          personalizados para los momentos más especiales de la vida. Nos
+          esforzamos por brindar alegría y conexión a través de cada detalle,
+          creando recuerdos que duren para siempre.
+        </p>
+      </section>
+      <section>
+        <h3>VISIÓN</h3>
+        <p className={styles.paragraph}>
+          Ser la empresa líder en regalos personalizados, reconocida por nuestra
+          creatividad, calidad y servicio excepcional. Queremos ser la primera
+          opción para aquellos que buscan sorprender y emocionar a sus seres
+          queridos en cada ocasión especial.
         </p>
       </section>
       <section>
