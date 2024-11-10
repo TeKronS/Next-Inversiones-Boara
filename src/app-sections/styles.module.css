@@ -1,6 +1,9 @@
 .header {
-  position: sticky;
+  position: fixed;
+  grid-area: header;
   top: 0;
+  right: 0;
+  left: 0;
   display: grid;
   grid-template-columns: 1px minmax(0, 1fr);
   grid-template-rows: 70px 40px;
@@ -62,6 +65,7 @@
 
 .footer {
   display: grid;
+  grid-area: footer;
   grid-template-columns: 1fr 1fr 1fr;
   padding: 5px;
   border-top: 4px solid var(--color-main1);

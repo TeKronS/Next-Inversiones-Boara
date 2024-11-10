@@ -1,31 +1,19 @@
-/* :root {
-  --background: #ffffff;
-  --foreground: #171717;
-} */
-
-/* @media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-} */
-
 html,
 body {
   max-width: 100vw;
   width: 100vw;
   min-height: 100vh;
-  overflow-x: hidden;
   display: grid;
   grid-template-rows: 110px 1fr auto;
-  grid-template-columns: 100%;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
   overflow-y: scroll;
   overflow-x: hidden;
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
   font-family: "Times New Roman", Times, serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

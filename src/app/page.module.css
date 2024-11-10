@@ -1,5 +1,6 @@
-/* .main {
-} */
+.main {
+  grid-area: main;
+}
 
 .cardContent {
   position: relative;
