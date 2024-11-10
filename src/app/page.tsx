@@ -1,5 +1,5 @@
 import styles from "./page.module.css";
-import { Card } from "@/components/Cards/Card";
+import { Card } from "@/components/Cards/arrangementsCard/Card";
 import { MenuDesplegable } from "@/components/MenuDesplegable/MenuDesplegable";
 import img1 from "@/img/Card/1.jpg";
 import img2 from "@/img/Card/2.jpg";
