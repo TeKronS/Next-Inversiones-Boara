@@ -1,21 +1,25 @@
 import styles from "./styles.module.css";
+import { ReviewCard } from "@/components/Cards/ReviewCard/ReviewCard";
 
 export default function Resenas() {
   return (
     <section className={styles.body}>
-      <h3>Reseñas</h3>
-      <div className={styles.orderBar}>
-        <span>Ordenar por:</span>
-        <button id="resientes">
-          Resientes
-          <div>⬤</div>
-        </button>
-        <button id="antiguos">
-          Antiguos
-          <div>◯</div>
-        </button>
+      <h2>Reseñas</h2>
+      <div className={styles.reviewContent}>
+        <div className={styles.bg}>
+          <div className={`${styles.topleft} ${styles.particle}`}></div>
+          <div className={`${styles.topright} ${styles.particle}`}></div>
+          <div className={`${styles.bottomleft} ${styles.particle}`}></div>
+          <div className={`${styles.bottomright} ${styles.particle}`}></div>
+        </div>
+        <ReviewCard />
+        <ReviewCard />
+        <ReviewCard />
+        <ReviewCard />
+        <ReviewCard />
+        <ReviewCard />
+        <ReviewCard />
       </div>
-      <section className={styles.bodyArticles}></section>
     </section>
   );
 }
