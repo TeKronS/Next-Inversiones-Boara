@@ -7,7 +7,7 @@ export const MenuDesplegable = () => {
   const refNavBody = useRef<HTMLDivElement>(null);
   const refButton = useRef<HTMLDivElement>(null);
 
-  let isOpen = false;
+  let isOpen = true;
 
   function clickButton() {
     if (isOpen) {

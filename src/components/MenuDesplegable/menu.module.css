@@ -4,7 +4,6 @@
   box-sizing: content-box;
   top: 110px;
   z-index: 50;
-  /* overflow: hidden; */
   border-bottom-left-radius: 50px;
   border-bottom-right-radius: 50px;
   transition: 400ms ease-in-out 0s all;
@@ -51,7 +50,7 @@
 
 .botonOpen {
   @media screen and (max-width: 500px) {
-    bottom: -0px;
+    bottom: 60px;
     background-color: transparent;
   }
 }
@@ -62,6 +61,7 @@
   top: 2px;
   left: 32px;
   transition: 500ms ease-in-out 0s;
+  pointer-events: none;
 }
 
 .boton path {
