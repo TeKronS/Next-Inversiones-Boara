@@ -6,7 +6,9 @@ export const ReviewCard = () => {
   return (
     <article className={styles.body}>
       <time dateTime="06/11/2024">Hace un mes</time>
-      <Image alt="" src={img1} />
+      <div className={styles.imagenContent}>
+        <Image alt="" src={img1} />
+      </div>
     </article>
   );
 };

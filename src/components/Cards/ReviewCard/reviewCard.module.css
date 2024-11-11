@@ -19,12 +19,15 @@
   text-align: center;
 }
 
-.body img {
+.imagenContent {
+  aspect-ratio: 1/1;
+}
+
+.imagenContent img {
   overflow: hidden;
   width: 100%;
   height: 100%;
   object-fit: contain;
-  aspect-ratio: 1/1;
   opacity: 1;
   object-position: bottom;
 }
