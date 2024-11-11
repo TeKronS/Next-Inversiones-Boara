@@ -3,6 +3,7 @@
   position: relative;
   flex-direction: column;
   z-index: 2;
+  grid-area: main;
 }
 
 .body h2 {
