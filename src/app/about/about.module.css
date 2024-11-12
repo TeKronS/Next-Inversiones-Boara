@@ -5,6 +5,7 @@
   font-size: 17px;
   padding: 0 20px;
   grid-area: main;
+  background-color: aliceblue;
 }
 
 .body section {
