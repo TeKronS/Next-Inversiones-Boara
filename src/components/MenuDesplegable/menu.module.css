@@ -3,14 +3,14 @@
   display: grid;
   box-sizing: content-box;
   top: 110px;
-  z-index: 50;
+  z-index: 10;
   border-bottom-left-radius: 50px;
   border-bottom-right-radius: 50px;
   transition: 400ms ease-in-out 0s all;
   width: 100vw;
   max-width: 500px;
   background-color: rgba(235, 180, 65, 0.9);
-  left: calc(50vw - 258px);
+  left: calc(50vw - 250px);
   height: 10px;
   @media screen and (max-width: 500px) {
     left: 0;
