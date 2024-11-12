@@ -10,6 +10,7 @@
   background: var(--color-main1);
   color: var(--color-titlePage);
   z-index: 100;
+  overflow: hidden;
   @media screen and (max-width: 600px) {
     grid-template-columns: 110px minmax(0, 1fr);
   }
@@ -49,16 +50,21 @@
 }
 
 .lia {
-  font-weight: bold;
-  padding: 3px 10px;
-  border-radius: 3px;
-  border-right: 1px solid black;
-  border-left: 1px solid black;
-  color: black;
-  transition: 200ms ease-in-out 0s;
+  display: flex;
 }
 
-.lia:hover {
+.lia a {
+  transition: 200ms ease-in-out 0s;
+  font-size: 16px;
+  font-weight: bold;
+  border-right: 1px solid black;
+  border-left: 1px solid black;
+  padding: 4px 10px;
+  border-radius: 4px;
+  color: black;
+}
+
+.lia a:hover {
   background: #15120494;
   color: var(--color-titlePage);
 }
@@ -74,6 +80,7 @@
   grid-gap: 10px;
   height: 180px;
   z-index: 5;
+  overflow: hidden;
   @media screen and (max-width: 500px) {
     grid-template-columns: 1fr 1fr;
     height: 360px;

@@ -1,5 +1,7 @@
 .main {
   grid-area: main;
+  background-color: aliceblue;
+  max-width: 100%;
 }
 
 .cardContent {
@@ -8,7 +10,5 @@
   grid-template-columns: repeat(auto-fit, 320px);
   grid-gap: 20px;
   justify-content: space-around;
-  width: 100%;
   padding: 30px 10px;
-  overflow: hidden;
 }

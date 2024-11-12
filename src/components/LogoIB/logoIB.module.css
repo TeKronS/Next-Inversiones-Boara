@@ -5,6 +5,7 @@
   height: 100vh;
   transition: 500ms ease-in-out 0s;
   pointer-events: none;
+  touch-action: none;
   z-index: 100;
 }
 
@@ -27,6 +28,7 @@
   position: fixed;
   background: var(--color-main1);
   pointer-events: all;
+  cursor: default;
 }
 
 .resizeBox {

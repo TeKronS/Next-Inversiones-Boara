@@ -22,7 +22,7 @@ import img18 from "@/img/Card/18.jpg";
 
 export default function Home() {
   return (
-    <section className={styles.main}>
+    <main className={styles.main}>
       <MenuDesplegable />
       <section className={styles.cardContent}>
         <Card title="Titulo de arreglo 1" img={img1} />
@@ -44,6 +44,6 @@ export default function Home() {
         <Card title="Titulo de arreglo 1" img={img17} />
         <Card title="Titulo de arreglo 1" img={img18} />
       </section>
-    </section>
+    </main>
   );
 }
