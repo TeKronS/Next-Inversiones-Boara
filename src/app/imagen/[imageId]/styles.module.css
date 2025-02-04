@@ -1,0 +1,28 @@
+.body {
+  display: flex;
+  z-index: 99 !important;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  padding: 10px;
+  overflow: hidden;
+  background-color: bisque;
+  aspect-ratio: 3/4;
+}
+
+.body div {
+  display: flex;
+  height: 100%;
+  object-fit: contain;
+  margin: auto;
+  aspect-ratio: 3/4;
+  overflow: hidden;
+}
+
+.body img {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+  z-index: 100 !important;
+}

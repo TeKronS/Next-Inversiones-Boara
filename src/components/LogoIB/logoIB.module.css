@@ -1,0 +1,139 @@
+.logoContainer {
+  position: fixed;
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  transition: 500ms ease-in-out 0s;
+  pointer-events: none;
+  touch-action: none;
+  z-index: 98;
+}
+
+.boxLogo {
+  position: relative;
+  width: 1px;
+  height: 1px;
+  top: 12px;
+  left: 20px;
+  transform-origin: top left;
+  transform: scale(0.6, 0.5) translatex(0);
+}
+
+.BoxLogoCenter {
+  top: -102.5px;
+  left: -100px;
+}
+
+.containerBg {
+  position: fixed;
+  background: var(--color-main1);
+  pointer-events: all;
+  cursor: default;
+}
+
+.resizeBox {
+  display: flex;
+  transform-origin: left top;
+  transition: 500ms ease-in-out 0s;
+  top: 1;
+  left: 1;
+  width: 3px;
+  height: 2px;
+  transform: scale(0.46);
+  justify-content: center;
+  align-items: center;
+  z-index: 50;
+}
+
+.logoContainerFullScreen {
+  width: 100vw;
+  height: 100vh;
+  transform: scale(1) !important;
+}
+
+.animationIBF {
+  transform: scale(1.2, 1) translatex(-2200px) !important;
+}
+
+.animationIB {
+  transform: scale(1, 0.8) translatex(-2240px) !important;
+}
+
+.IBFl {
+  left: 7px;
+  transition: 500ms ease-in-out 0s;
+}
+.IBFl div {
+  background: linear-gradient(170deg, black 0%, var(--color-font-1) 100%);
+  transform: translatex(30px) rotate(45deg);
+}
+.IBFr {
+  left: 238.4px;
+  transition: 500ms ease-in-out 0s;
+}
+.IBFr div {
+  background: linear-gradient(90deg, black 0%, var(--color-font-1) 100%);
+  transform: translatex(-30px) rotate(-45deg);
+}
+
+.IBF {
+  display: flex;
+  width: 60px;
+  height: 120px;
+  position: absolute;
+  top: 67px;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  transform: scale(1.2, 1) translatex(0);
+  transition: 500ms ease-in-out 0s;
+}
+
+.IBF div {
+  position: absolute;
+  width: 85px;
+  height: 85px;
+}
+
+.IB {
+  position: relative;
+  transition: 500ms ease-in-out 0s;
+  transform: scale(1, 0.8) translatex(0);
+  width: 150px;
+  height: 315px;
+  left: 77.5px;
+  overflow-x: hidden;
+  top: -30px;
+}
+
+.IBTextContainer {
+  background: #d9ad53;
+  width: 220px;
+  height: 220px;
+  transform-origin: center;
+  transform: translate(-34.5px, 47px) rotate(45deg) !important;
+  overflow: hidden;
+  display: flex;
+  background: linear-gradient(
+    145deg,
+    var(--color-main2) 0%,
+    var(--color-titlePage) 70%
+  );
+  text-align: center;
+}
+
+.IBText {
+  height: 220px;
+  width: 220px;
+  line-height: 220px;
+  text-align: center;
+  font-size: 120px;
+  font-family: arial;
+  color: var(--color-main1);
+  transform-origin: center;
+  transform: rotate(-20deg) scale(1, 1.4) !important;
+}
+
+.disp {
+  position: relative;
+}

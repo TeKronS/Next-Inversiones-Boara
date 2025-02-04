@@ -3,9 +3,14 @@ import { Card } from "@/components/Cards/arrangementsCard/Card";
 import { MenuDesplegable } from "@/components/MenuDesplegable/MenuDesplegable";
 import { CardType } from "@/app/tipes";
 
-export default async function Home() {
+export default async function Arreglos({
+  params,
+}: {
+  params: Promise<{ id: string }>;
+}) {
   const DOMINIO = process.env.NEXT_DOMINIO_API_URL;
-  const res = await fetch(`${DOMINIO}/api/arreglos`);
+  const parametro = (await params).id;
+  const res = await fetch(`${DOMINIO}/api/arreglos/${parametro}`);
   const data = await res.json();
 
   return (

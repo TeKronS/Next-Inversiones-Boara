@@ -1,0 +1,114 @@
+.body {
+  position: fixed;
+  display: grid;
+  box-sizing: content-box;
+  top: 110px;
+  z-index: 10;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+  transition: 400ms ease-in-out 0s all;
+  width: 100vw;
+  max-width: 500px;
+  background-color: rgba(235, 180, 65, 0.9);
+  left: calc(50vw - 250px);
+  height: 10px;
+  @media screen and (max-width: 500px) {
+    left: 0;
+  }
+}
+
+.bodyOpen {
+  height: 150px;
+  @media screen and (max-width: 500px) {
+    height: calc(100vh - 107px);
+    border-radius: 0;
+  }
+}
+
+.innerBody {
+  width: 100vw;
+  max-width: 500px;
+  min-height: 100%;
+  left: -10px;
+  overflow: hidden;
+  transition: 400ms ease-in-out 0s all;
+}
+
+.boton {
+  position: absolute;
+  background-color: rgba(235, 180, 65, 0.9);
+  width: 100px;
+  height: 45px;
+  display: flex;
+  justify-self: center;
+  bottom: -45px;
+  transition: 300ms ease-in-out 0s all;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+  cursor: pointer;
+}
+
+.botonOpen {
+  @media screen and (max-width: 500px) {
+    bottom: 60px;
+    background-color: transparent;
+  }
+}
+
+.boton svg {
+  position: absolute;
+  width: 35px;
+  top: 2px;
+  left: 32px;
+  transition: 500ms ease-in-out 0s;
+  pointer-events: none;
+}
+
+.boton path {
+  fill: rgba(2, 19, 35, 0.7);
+}
+
+.boton:hover svg {
+  transform: scale(1.2) rotateY(180deg);
+}
+
+.svgOpen {
+  transform: rotateX(180deg);
+  @media screen and (max-width: 500px) {
+    transition: none;
+    left: calc(50vw - 22.5px);
+  }
+}
+
+.boton:hover .svgOpen {
+  transform: scale(1.2) rotate(180deg) !important;
+}
+
+.optionsContainer {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(auto-fit, 150px);
+  justify-content: space-around;
+  gap: 10px;
+  padding: 10px;
+  margin-top: 10px;
+  @media screen and (max-width: 500px) {
+    width: calc(100vw - 18px);
+  }
+}
+
+.optionsContainer a {
+  background-color: var(--color-titlePage);
+  padding: 10px;
+  border-radius: 50px;
+  width: 150px;
+  height: 40px;
+  text-align: center;
+  cursor: pointer;
+  transition: 175ms ease-in-out 0s all;
+}
+
+.optionsContainer a:hover {
+  background-color: rgb(208, 215, 71);
+  font-size: 18px;
+}

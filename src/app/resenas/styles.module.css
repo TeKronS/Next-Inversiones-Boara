@@ -1,0 +1,64 @@
+.body {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  z-index: 2;
+  grid-area: main;
+}
+
+.body h2 {
+  margin: 10px 0;
+  text-align: center;
+  color: var(--color-titlePage);
+  font-size: 32px;
+  z-index: 1;
+}
+
+.reviewContent {
+  display: grid;
+  gap: 15px;
+  justify-content: center;
+  padding: 0 10px 10px 10px;
+}
+
+.bg {
+  background-color: rgb(15, 14, 14);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+}
+
+.particle {
+  background-image: url(./tl.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: fixed;
+  width: 300px;
+  aspect-ratio: 1 / 1;
+}
+
+.topleft {
+  top: -30px;
+  left: -130px;
+  transform: rotate(135deg);
+}
+
+.topright {
+  top: -30px;
+  right: -130px;
+  transform: rotate(-135deg);
+}
+
+.bottomleft {
+  bottom: -130px;
+  left: -140px;
+  transform: rotate(45deg);
+}
+.bottomright {
+  bottom: -130px;
+  right: -140px;
+  transform: rotate(-45deg);
+}
