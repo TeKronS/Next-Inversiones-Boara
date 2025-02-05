@@ -2,17 +2,16 @@ import styles from "./page.module.css";
 import { Card } from "@/components/Cards/arrangementsCard/Card";
 import { MenuDesplegable } from "@/components/MenuDesplegable/MenuDesplegable";
 import { CardType } from "@/app/tipes";
+import { getArreglos } from "./methods/arreglos/fetchArreglos";
 
 export default async function Home() {
-  const DOMINIO = process.env.NEXT_DOMINIO_API_URL;
-  const res = await fetch(`${DOMINIO}/api/arreglos`);
-  const data = await res.json();
+  const arreglos = await getArreglos();
 
   return (
     <main className={styles.main}>
       <MenuDesplegable />
       <section className={styles.cardContent}>
-        {data.map((cardData: CardType) => {
+        {arreglos.map((cardData: CardType) => {
           return (
             <Card
               key={cardData._id}

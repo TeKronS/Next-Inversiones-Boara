@@ -1,3 +1,4 @@
+import { getImageArreglo } from "@/app/methods/arreglos/fetchArreglos";
 import styles from "./styles.module.css";
 import Image from "next/image";
 
@@ -6,17 +7,14 @@ export default async function Imagen({
 }: {
   params: Promise<{ imageId: string }>;
 }) {
-  const parametro = (await params).imageId;
-  const response = await fetch(
-    `${process.env.NEXT_DOMINIO_API_URL}/api/image/${parametro}`,
-    { method: "GET" }
-  );
-  const result = await response.json();
-  const { urlImage } = result[0];
+  const id = (await params).imageId;
+  const arreglo = await getImageArreglo(id);
+  const { urlImage } = arreglo[0];
+
   return (
     <section className={styles.body}>
       <div>
-        <Image alt="" width={675} height={864} src={urlImage} />
+        <Image alt="" width={1279} height={1600} src={urlImage} />
       </div>
     </section>
   );

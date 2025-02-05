@@ -1,18 +1,16 @@
 import styles from "./styles.module.css";
 import { ReviewCard } from "@/components/Cards/ReviewCard/ReviewCard";
 import { ReviewType } from "@/app/tipes";
+import { getResenas } from "../methods/resenas/getResenas";
 
 export default async function Resenas() {
-  const DOMINIO = process.env.NEXT_DOMINIO_API_URL;
-
-  const res = await fetch(`${DOMINIO}/api/resenas`);
-  const data = await res.json();
+  const resenas = await getResenas();
 
   return (
     <section className={styles.body}>
       <h2>Reseñas</h2>
       <div className={styles.reviewContent}>
-        {data.map((cardData: ReviewType) => {
+        {resenas.map((cardData: ReviewType) => {
           return (
             <ReviewCard
               key={cardData._id}
