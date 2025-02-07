@@ -19,6 +19,7 @@ export async function getArreglosCategory(category: string) {
 }
 
 export async function getImageArreglo(id: string) {
+  console.log(id);
   await dbConnect();
   const response = await Arreglos.find({ _id: id });
   return response;

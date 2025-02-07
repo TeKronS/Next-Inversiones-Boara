@@ -9,9 +9,8 @@ export default async function Arreglos({
 }: {
   params: Promise<{ id: string }>;
 }) {
-  const category = (await params).id;
+  const category = decodeURIComponent((await params).id);
   const arreglos = await getArreglosCategory(category);
-  console.log(arreglos);
 
   return (
     <main className={styles.main}>
