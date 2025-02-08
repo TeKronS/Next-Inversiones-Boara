@@ -3,23 +3,19 @@ import { Card } from "@/components/Cards/arrangementsCard/Card";
 import { MenuDesplegable } from "@/components/MenuDesplegable/MenuDesplegable";
 import { CardType } from "@/app/tipes";
 import { getArreglos } from "./methods/arreglos/fetchArreglos";
+import { unstable_cache } from "next/cache";
 
-export async function getStaticProps() {
-  const arreglos = await getArreglos();
+const getRevalidateArreglos = unstable_cache(
+  async () => {
+    return await getArreglos();
+  },
+  ["arreglos"],
+  { revalidate: 3600, tags: ["arreglos"] }
+);
 
-  return {
-    props: {
-      arreglos,
-    },
-    revalidate: 3600,
-  };
-}
+export default async function Home() {
+  const arreglos = await getRevalidateArreglos();
 
-export default async function Home({
-  arreglos,
-}: {
-  arreglos: Array<CardType>;
-}) {
   return (
     <main className={styles.main}>
       <MenuDesplegable />
