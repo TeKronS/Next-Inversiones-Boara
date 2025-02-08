@@ -24,12 +24,13 @@ export default async function Arreglos({
 }) {
   const category = decodeURIComponent((await params).id);
   const arreglos = await getRevalidateCategories(category);
+  const arreglosInvertido = arreglos.reverse();
 
   return (
     <main className={styles.main}>
       <MenuDesplegable />
       <section className={styles.cardContent}>
-        {arreglos.map((cardData: CardType) => {
+        {arreglosInvertido.map((cardData: CardType) => {
           return (
             <Card
               key={cardData._id}

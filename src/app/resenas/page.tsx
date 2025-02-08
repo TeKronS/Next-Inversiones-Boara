@@ -14,12 +14,13 @@ const getRevalidateResenas = unstable_cache(
 
 export default async function Resenas() {
   const resenas = await getRevalidateResenas();
+  const resenasInvertido = resenas.reverse();
 
   return (
     <section className={styles.body}>
       <h2>Reseñas</h2>
       <div className={styles.reviewContent}>
-        {resenas.map((cardData: ReviewType) => {
+        {resenasInvertido.map((cardData: ReviewType) => {
           return (
             <ReviewCard
               key={cardData._id}

@@ -15,12 +15,12 @@ const getRevalidateArreglos = unstable_cache(
 
 export default async function Home() {
   const arreglos = await getRevalidateArreglos();
-
+  const arreglosInvertido = arreglos.reverse();
   return (
     <main className={styles.main}>
       <MenuDesplegable />
       <section className={styles.cardContent}>
-        {arreglos.map((cardData: CardType) => {
+        {arreglosInvertido.map((cardData: CardType) => {
           return (
             <Card
               key={cardData._id}
