@@ -1,11 +1,11 @@
 import { MenuDesplegable } from "@/components/MenuDesplegable/MenuDesplegable";
-import styles from "./styles.module.css";
+import styles from "./page.module.css";
 
 export default function Loading() {
   return (
-    <section className={styles.body}>
+    <main className={styles.main}>
       <MenuDesplegable />
       <section className={styles.cardContent} />
-    </section>
+    </main>
   );
 }
