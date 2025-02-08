@@ -4,9 +4,22 @@ import { MenuDesplegable } from "@/components/MenuDesplegable/MenuDesplegable";
 import { CardType } from "@/app/tipes";
 import { getArreglos } from "./methods/arreglos/fetchArreglos";
 
-export default async function Home() {
+export async function getStaticProps() {
   const arreglos = await getArreglos();
 
+  return {
+    props: {
+      arreglos,
+    },
+    revalidate: 3600,
+  };
+}
+
+export default async function Home({
+  arreglos,
+}: {
+  arreglos: Array<CardType>;
+}) {
   return (
     <main className={styles.main}>
       <MenuDesplegable />
