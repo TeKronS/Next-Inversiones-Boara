@@ -1,5 +1,6 @@
 import whatsapp from "./../img/WhatsappIcon.jpg";
 import facebook from "@/img/IconMsg.png";
+import instagram from "@/img/instagram.avif";
 import styles from "./styles.module.css";
 import Image from "next/image";
 import Link from "next/link";
@@ -20,6 +21,20 @@ export const FooterSection = () => {
         <h4>Contáctanos</h4>
         <div className={styles.phoneContent}>
           <div>
+            <Image alt="" src={instagram} />
+            <a
+              href={
+                "https://www.instagram.com/inversionesboara?utm_source=qr&igsh=bmZteDh2aHJ0emk0"
+              }
+            >
+              Instagram
+            </a>
+          </div>
+          <div>
+            <Image alt="" src={facebook} />
+            <a href={"https://m.me/105380652059822"}>Facebook</a>
+          </div>
+          <div>
             <Image alt="Logo de Whatsap" src={whatsapp} />
             <a
               href={
@@ -38,10 +53,6 @@ export const FooterSection = () => {
             >
               +58 414-4238416
             </a>
-          </div>
-          <div>
-            <Image alt="" src={facebook} />
-            <a href={"https://m.me/105380652059822"}>Facebook</a>
           </div>
         </div>
       </section>
