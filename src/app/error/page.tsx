@@ -7,9 +7,9 @@ export default function Error() {
       <h5>Error (400)</h5>
       <p>Nuestro sistema parece no estar disponible. Inténtalo más tarde.</p>
       <div>
-        <a href={"/"}>
+        <Link href={"/"}>
           <span>Volver a Intertarlo</span>
-        </a>
+        </Link>
         <Link href={"/about"}>
           <span>
             Saber mas sobre <span translate={"no"}>Inversiones Boara</span>

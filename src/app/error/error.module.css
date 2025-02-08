@@ -6,6 +6,7 @@
   font-size: 25px;
   text-align: center;
   grid-area: main;
+  padding: 0 15px;
 }
 
 .body h5 {
@@ -33,13 +34,15 @@
   background: #f4f4f4;
   border: 1px solid;
   box-shadow: 3px 2px 5px black;
+  width: 100%;
+  height: 100%;
 }
 
-.body a :visited {
+.body a:visited {
   color: black;
 }
 
-.body a :hover {
+.body a:hover {
   background: rgb(200, 200, 200);
 }
 
