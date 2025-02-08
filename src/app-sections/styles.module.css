@@ -166,3 +166,9 @@
   text-decoration: underline;
   font-size: 18px;
 }
+
+.tekron {
+  margin-top: 15px;
+  display: grid;
+  font-size: 15px;
+}
