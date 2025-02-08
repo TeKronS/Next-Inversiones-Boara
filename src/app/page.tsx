@@ -10,7 +10,7 @@ const getRevalidateArreglos = unstable_cache(
     return await getArreglos();
   },
   ["arreglos"],
-  { revalidate: 3600, tags: ["arreglos"] }
+  { revalidate: 1800, tags: ["arreglos"] }
 );
 
 export default async function Home() {

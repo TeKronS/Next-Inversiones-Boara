@@ -2,9 +2,18 @@ import styles from "./styles.module.css";
 import { ReviewCard } from "@/components/Cards/ReviewCard/ReviewCard";
 import { ReviewType } from "@/app/tipes";
 import { getResenas } from "../methods/resenas/getResenas";
+import { unstable_cache } from "next/cache";
+
+const getRevalidateResenas = unstable_cache(
+  async () => {
+    return await getResenas();
+  },
+  ["resenas"],
+  { revalidate: 1800, tags: ["resenas"] }
+);
 
 export default async function Resenas() {
-  const resenas = await getResenas();
+  const resenas = await getRevalidateResenas();
 
   return (
     <section className={styles.body}>

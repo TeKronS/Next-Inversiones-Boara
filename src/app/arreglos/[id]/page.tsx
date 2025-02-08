@@ -3,6 +3,19 @@ import { Card } from "@/components/Cards/arrangementsCard/Card";
 import { MenuDesplegable } from "@/components/MenuDesplegable/MenuDesplegable";
 import { CardType } from "@/app/tipes";
 import { getArreglosCategory } from "@/app/methods/arreglos/fetchArreglos";
+import { unstable_cache } from "next/cache";
+
+const getRevalidateCategories = async (category: string) => {
+  const cacheData = await unstable_cache(
+    async () => {
+      return await getArreglosCategory(category);
+    },
+    [category],
+    { revalidate: 1800, tags: [category] }
+  )();
+
+  return cacheData;
+};
 
 export default async function Arreglos({
   params,
@@ -10,7 +23,7 @@ export default async function Arreglos({
   params: Promise<{ id: string }>;
 }) {
   const category = decodeURIComponent((await params).id);
-  const arreglos = await getArreglosCategory(category);
+  const arreglos = await getRevalidateCategories(category);
 
   return (
     <main className={styles.main}>

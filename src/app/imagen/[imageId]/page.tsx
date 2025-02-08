@@ -8,9 +8,7 @@ export default async function Imagen({
   params: Promise<{ imageId: string }>;
 }) {
   const id = (await params).imageId;
-  console.log(id);
   const arreglo = await getImageArreglo(id);
-  console.log(arreglo);
   const { urlImage } = arreglo[0];
 
   return (
