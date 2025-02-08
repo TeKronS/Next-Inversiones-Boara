@@ -2,13 +2,19 @@ import whatsapp from "./../img/WhatsappIcon.jpg";
 import facebook from "@/img/IconMsg.png";
 import styles from "./styles.module.css";
 import Image from "next/image";
+import Link from "next/link";
 
 export const FooterSection = () => {
   return (
     <footer className={styles.footer}>
       <section className={styles.copyright}>
         <span>INVERSIONES BOARA</span>
-        <span>Todos los derechos Reservados</span>
+        <div className={styles.tekron}>
+          <span>Creado por</span>
+          <Link target="blank" href="https://github.com/TeKronS/">
+            Simón Ramírez
+          </Link>
+        </div>
       </section>
       <section className={styles.contact}>
         <h4>Contáctanos</h4>
